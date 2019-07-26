@@ -768,7 +768,10 @@ class Swiper extends Component {
     let firstCard = true
     let cardPosition = 0
 
-    while (stackSize-- > 0 && (firstCard || showSecondCard) && !swipedAllCards) {
+    /**
+     *     removed checking for if not swipedAllCards
+     */
+    while (stackSize-- > 0 && (firstCard || showSecondCard)) {
       const key = this.getCardKey(cards[index], index)
       this.pushCardToStack(renderedCards, index, cardPosition, key, firstCard)
 
